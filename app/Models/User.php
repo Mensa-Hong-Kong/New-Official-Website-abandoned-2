@@ -7,6 +7,8 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
+use App\Models\User\Email;
+use App\Models\User\Mobile;
 
 class User extends Authenticatable
 {
@@ -18,9 +20,15 @@ class User extends Authenticatable
      * @var array<int, string>
      */
     protected $fillable = [
-        'name',
-        'email',
+        'username',
         'password',
+        'family_name',
+        'given_name',
+        'middle_name',
+        'nickname',
+        'gender_id',
+        'birthday',
+        'email_forwarding',
     ];
 
     /**
@@ -39,7 +47,24 @@ class User extends Authenticatable
      * @var array<string, string>
      */
     protected $casts = [
-        'email_verified_at' => 'datetime',
         'password' => 'hashed',
     ];
+
+    public function mainEmail() {
+        return $this->hasOne(Email::class)
+            ->where('is_main', true);
+    }
+
+    public function emails() {
+        $this->hasMany(Email::class);
+    }
+
+    public function mainMobile() {
+        return $this->hasOne(Mobile::class)
+            ->where('is_main', true);
+    }
+
+    public function mobile() {
+        $this->hasMany(Mobile::class);
+    }
 }
