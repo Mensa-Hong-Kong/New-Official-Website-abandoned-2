@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AuthenticationController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,4 +14,4 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::view('/', 'layouts.app')->name('index');
+Route::view('/', 'index')->name('index');
