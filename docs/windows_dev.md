@@ -170,12 +170,13 @@ nvm install --lts
 ## VSCode Extensions
 
 -   WSL (ms-vscode-remote.remote-wsl)
--   GitLens (eamodio.gitlens)
 -   PHP by DEVSENSE (DEVSENSE.phptools-vscode)
--   Prettier (esbenp.prettier-vscode)
--   Auto Close Tag (formulahendry.auto-close-tag)
--   Auto Rename Tag (formulahendry.auto-rename-tag)
+-   HTML Format (mohd-akram.vscode-html-format)
+-   HTML CSS Support (ecmel.vscode-html-css)
+-   Auto Complete Tag (formulahendry.auto-complete-tag)
+-   AutoFileName (JerryHong.autofilename)
+-   Bootstrap InteSense (hossaini.bootstrap-intellisense)
 -   Bootstrap 5 & Font Awesome Snippets (HansUXdev.bootstrap5-snippets)
--   DotENV (mikestead.dotenv)
 -   JavaScript Snippet Pack (akamud.vscode-javascript-snippet-pack)
 -   Laravel Extension Pack (onecentlin.laravel-extension-pack)
+-   Thunder Client (rangav.vscode-thunder-client)
